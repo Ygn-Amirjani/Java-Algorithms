@@ -1,23 +1,28 @@
-class JumpGame{
+import java.util.Scanner;
+
+class ThePowerSum{
+
+    private static final Scanner input = new Scanner(System.in);
+    private static int x, n, count = 1; 
 
     public static void main(String[] args) {
-        int[] array = {3,0,8,2,0,0,1};
-        System.out.println(JG(array,0));
+        x = input.nextInt();
+        n = input.nextInt();
+        System.out.println(fp(x, n, count));
     }
 
-    public static boolean JG(int[] nums, int index){
-        int value = 1;
-        boolean bool = false ;
-        
-        if(index >= (nums.length-1) || nums.length == 1)
-            return true ;
-        else{
-            while(value <= nums[index]){
-                bool = JG(nums, index+value) || bool ;
-                value++;
-            }
-            return bool ;
+    public static int fp(int x, int n, int count){
+        int value = x - (int)Math.pow(count, n);
+
+        if(value < 0)
+            return 0 ;
+        else {
+            if(value == 0)
+                return 1 ;
+            else
+                return fp(value, n, count+1) + fp(x, n, count+1);
         }
     }
+
 
 }

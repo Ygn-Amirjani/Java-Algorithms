@@ -1,40 +1,29 @@
-import java.util.*;
+import java.util.Scanner;
 
-class Revisited{
-
+class RecursiveDigitSum {
 
     private static final Scanner input = new Scanner(System.in);
-    private static final int[] array = new int[2];
-    private static int[] arr ;
-    private static int len ;
-    
+    private static String n;
+    private static int k ;
+
     public static void main(String[] args) {
-        len = input.nextInt();
+        n = input.next();
+        k = input.nextInt();
+        System.out.println(superDigit(n,k));
+        input.close();
+    }
 
-        for(int i=0; i<len; i+=1){
-            array[0] = input.nextInt();
-            array[1] = input.nextInt();
-
-            arr = new int[array[1]];
-            for(int j=0; j<array[1]; j+=1){
-                arr[j] = input.nextInt();
+    static int superDigit(String number, int k) {
+        if (number.length() > 1){
+            long sum = 0;
+            for (int i = 0; i < number.length(); i++){
+                sum += Character.getNumericValue(number.charAt(i));
             }
-
-            Arrays.sort(arr);
-            System.out.println(fr(array[0],arr,1));
+            return superDigit(Long.toString(sum * k), 1);
         }
-    
-    }
-
-    public static int fr(int n, int[] a , int count){
-        if(a.length+1 == count)
-            return 0 ;
         else
-            if(n / a[a.length-count] == 1 || n % a[a.length-count] != 0)
-                return fr(n,a,count+1);
-            else
-                return 1 + ((n / a[a.length-count]) * fr(a[a.length-count],a,count+1));     
+            return Integer.parseInt(number);
 
     }
-
+    
 }

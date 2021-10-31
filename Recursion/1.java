@@ -1,20 +1,26 @@
 import java.util.Scanner;
 
-class Factorial{
-
+class Power{
 
     private static final Scanner input = new Scanner(System.in);
-    private static int n ;
+    private static double x;
+    private static int n;
 
     public static void main(String[] args) {
+        x = input.nextDouble();
         n = input.nextInt();
-        System.out.println(fac(n));
+        System.out.printf("%.5f",fp(x,n));
     }
 
-    public static int fac(int n){
-        if(n == 1 || n == 0)
-            return 1 ;
-        else
-            return n * fac(n-1);
+    public static double fp(double x, int n){
+        if(n < 0){
+            x = 1 / x ;
+            n *= -1 ;
+        }
+        if(n == 0)
+            return 1;
+        else 
+            return x * fp(x , n - 1);
     }
+
 }
