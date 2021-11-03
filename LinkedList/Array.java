@@ -3,9 +3,10 @@ import java.util.Arrays;
 public class Array<E> 
 {
 
-    public final Object[] array ;
+    public final Object[] array ;  // create array
     public final int length_array ;
 
+    /** Constructor to insert the length of array */
     public Array(int length_array)
     {
 
@@ -14,6 +15,7 @@ public class Array<E>
         
     }
 
+    /** the getter method to return array[index] and cast to E */
     public E getArray(int index)
     {       
 
@@ -23,6 +25,7 @@ public class Array<E>
         return result ;
     }
 
+    /** the setter method to Allows access  */
     public void setArray(int index, E result)
     {
 
