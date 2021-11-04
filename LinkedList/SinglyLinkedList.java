@@ -2,8 +2,6 @@ import java.util.NoSuchElementException;
 
 public class SinglyLinkedList<E>
 {
-    Node<E> node = new Node<>();
-
     private Node<E> head ;
     /** the head of linked list */
 
@@ -24,6 +22,7 @@ public class SinglyLinkedList<E>
             //add element in the last node of the list
             Node<E> new_node = new Node<E>(new_element);
             Node<E> count = head ;
+
             for(int i=0; i<len-1; i+=1)
                 count = count.next;
             
@@ -31,6 +30,7 @@ public class SinglyLinkedList<E>
             count.next = new_node ;
             len += 1 ;
         }
+
     }
 
     /** I want to use the overload concept 
@@ -39,22 +39,22 @@ public class SinglyLinkedList<E>
     public void remove() throws NoSuchElementException
     {
         if(isEmpty())
-
             throw new NoSuchElementException();
-
         else
         {
             head = head.next;
             len -= 1 ;
         }
+
     }
 
     /** remove the linst.get(index) */
     public void remove(int index)
     {
         Node<E> tmp = head ; 
-        try { 
 
+        try { 
+            
             for(int i=0; i<index-1; i+=1)
                 tmp = tmp.next;
 
@@ -73,9 +73,36 @@ public class SinglyLinkedList<E>
                     len -= 1 ;
                 }
             }
+
         } catch (Exception e) {
             throw new IndexOutOfBoundsException();
         }
+
+    }
+
+    /** reverse the list */
+    public void reverse() throws NoSuchElementException
+    {   
+        Node<E> current = head;
+        Node<E> last_node = null ;
+        Node<E> next_node = null ;
+
+        if(isEmpty())
+            throw new NoSuchElementException(" Linked List is Empty ");
+        else
+        {
+            while (current != null) 
+            {
+                next_node = current.next ;
+                current.next = last_node ;
+                last_node = current ;
+                current = next_node ;
+            }
+    
+            head = last_node ;
+
+        }
+
     }
 
     /**Give index first and last and get their elements  */
@@ -96,11 +123,13 @@ public class SinglyLinkedList<E>
                 tmp = tmp.next;
                 couter += 1 ;
             }
+            
         } catch (Exception e) {
             throw new IndexOutOfBoundsException();
         }
 
         return array ;
+
     }
 
     /** If the captured element is in the linked list, we return true else return false 
@@ -109,6 +138,7 @@ public class SinglyLinkedList<E>
     public boolean contains(E key)
     {
         Node<E> counter = head ;
+
         if(isEmpty())
             return false;
         else
@@ -119,22 +149,28 @@ public class SinglyLinkedList<E>
                     return true ;
                 counter = counter.next;
             }
+
             return false;
         }
+
     }
 
     /** Take the element index and return the element */
     public E get(int index)
     {
-        Node<E> tmp = head;       
-        try{    
+        Node<E> tmp = head ; 
+
+        try { 
+
             for(int i=0; i<index; i+=1)
                 tmp = tmp.next;
         
             return tmp.value;
+
         } catch (Exception e) {
             throw new IndexOutOfBoundsException();
         }
+
     }
 
     /** Calculate the count of the list manually */
