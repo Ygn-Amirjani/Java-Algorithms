@@ -13,20 +13,20 @@ public class SinglyLinkedList<E>
     {
         if(isEmpty())
         {
-            //add element and put the node equals to null
+            // add element and put the node equals to null
             head = new Node<E>(new_element);
             len += 1 ;
         }
         else
         {
-            //add element in the last node of the list
+            // add element in the last node of the list
             Node<E> new_node = new Node<E>(new_element);
             Node<E> count = head ;
 
-            for(int i=0; i<len-1; i+=1)
+            for(int i=0; i<size()-1; i+=1)
                 count = count.next;
             
-            new_node.next = count.next;
+            new_node.next = null ;  // The last link is zero 
             count.next = new_node ;
             len += 1 ;
         }
@@ -48,34 +48,33 @@ public class SinglyLinkedList<E>
 
     }
 
-    /** remove the linst.get(index) */
-    public void remove(int index)
+    /** remove the element of list */
+    public void remove(E element)
     {
-        Node<E> tmp = head ; 
+        Node<E> counter = head ; 
 
         try { 
             
-            for(int i=0; i<index-1; i+=1)
-                tmp = tmp.next;
-
-            if(index == (size()-1))
-            {
-                tmp.next = null ;
-                len -= 1;
-            }
+            if(counter.value == element)
+                remove();
             else
             {
-                if(index == 0)
-                    remove();
-                else
+                for(int i=0; i<size()-1; i+=1)
                 {
-                    tmp.next = tmp.next.next ;
-                    len -= 1 ;
+                    if(counter.next.value == element)
+                    {
+                        counter.next = counter.next.next ;
+                        len -= 1 ;
+                        break ;
+                    }
+    
+                    counter = counter.next ;
                 }
+
             }
 
         } catch (Exception e) {
-            throw new IndexOutOfBoundsException();
+            throw new NoSuchElementException();
         }
 
     }
@@ -105,12 +104,12 @@ public class SinglyLinkedList<E>
 
     }
 
-    /**Give index first and last and get their elements  */
+    /** Give index first and last and get their elements  */
     public Array<E> sublist(int start, int end)
     {
         Array<E> array = new Array<>(end - start);  // we went return E[] array, so write Array class.
         Node<E> tmp = head ;
-        int couter = 0 ;
+        int counter = 0 ;
 
         try {
 
@@ -119,9 +118,9 @@ public class SinglyLinkedList<E>
         
             for(int i=start; i<end; i+=1)
             {
-                array.setArray(couter, tmp.value);
+                array.setArray(counter, tmp.value);
                 tmp = tmp.next;
-                couter += 1 ;
+                counter += 1 ;
             }
             
         } catch (Exception e) {
@@ -151,6 +150,24 @@ public class SinglyLinkedList<E>
             }
 
             return false;
+        }
+
+    }
+
+    /** convert E to String */
+    public String toString(int index) throws IndexOutOfBoundsException
+    {
+        if(isEmpty())
+            throw new IndexOutOfBoundsException();
+        else
+        {
+            Node<E> counter = head ;
+            String str = "";
+    
+            for(int i=0; i<index; i+=1)
+                counter = counter.next ;
+    
+            return str + counter.value ;
         }
 
     }
