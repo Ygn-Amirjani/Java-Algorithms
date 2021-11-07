@@ -3,6 +3,7 @@ class Solution
 
     private static final SinglyLinkedList<Integer> singlylist = new SinglyLinkedList<>();
     private static final CircleLinkedList<Integer> circlylist = new CircleLinkedList<>();
+    private static final DoublyLinkedList<Integer> doublylist = new DoublyLinkedList<>();
 
     public static void main(String[] args) {
 
@@ -72,6 +73,31 @@ class Solution
 
         circlylist.clear();
         System.out.println("________________"); 
+
+        doublylist.add(10); 
+        doublylist.add(8);
+        doublylist.add(5);
+        doublylist.add(4);
+        doublylist.add(3);
+        doublylist.add(6);
+        doublylist.add(13);
+
+        System.out.println(doublylist.countHead());
+        System.out.println("---"); 
+        System.out.println(doublylist.countTail());
+        System.out.println("---"); 
+
+        doublylist.remove(10);
+        doublylist.remove(4);
+        doublylist.remove(13);
+        doublylist.remove();
+
+        for(int i=0; i<doublylist.size(); i+=1){
+            System.out.println(doublylist.get(i));
+        }
+
+        doublylist.clear();
+        System.out.println("________________");
         
     }
     
