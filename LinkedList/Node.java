@@ -4,7 +4,10 @@ public class Node<E>
     public E value ;
     /** The value of the node */
 
-    public Node<E> next;
+    public Node<E> last ;
+    /** Reference the last node -> (Link) */
+
+    public Node<E> next ;
     /** Reference the next node -> (Link) */
 
     /**Constructor  */
@@ -24,6 +27,15 @@ public class Node<E>
     {
         this.value = value ;
         this.next = next ;
+    }
+
+    /** For Doubly linked list */
+    public Node(E value, Node<E> last, Node<E> next)
+    {
+        this.value = value ;
+        this.last = last ;
+        this.next = next ;
+
     }
 
 }
