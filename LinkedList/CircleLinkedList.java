@@ -201,11 +201,11 @@ public class CircleLinkedList<E>
     /** Calculate the count of the list manually */
     public int count()
     {
-        Node<E> tmp = head ;
-        int counter = 0 ;
+        Node<E> tmp = head.next ;
+        int counter = 1 ;
 
-        for(int i=0; i<size(); i+=1)
-        {   
+        while( tmp != head )
+        {
             tmp = tmp.next;
             counter += 1 ;
         }
