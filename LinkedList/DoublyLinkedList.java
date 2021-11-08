@@ -115,7 +115,6 @@ public class DoublyLinkedList<E> {
         tail = counter ;
     }
 
-
     /** Take the element index and return the element 
      * The nonsense method is used only for snooping :)
      * Be different  :))))
