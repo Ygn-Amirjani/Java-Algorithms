@@ -97,37 +97,43 @@ public class DoublyLinkedList<E> {
         }
     }
 
+    /** reverse the list */
+    public void reverse()
+    {
+        Node<E> counter = head ;
+        Node<E> tmp = null ;
+
+        for(int i=0; i<size(); i+=1)
+        {
+            tmp = counter.next ;
+            counter.next = counter.last ;
+            counter.last = tmp ;
+            counter = counter.last ;
+        }
+
+        head = tail ;
+        tail = counter ;
+    }
+
+
     /** Take the element index and return the element 
      * The nonsense method is used only for snooping :)
      * Be different  :))))
     */
     public E get(int index)
     {
-        Node<E> counter ;
-        if(index >= (size()/2))
-        {
-            counter = tail ;
-            for(int i=size()-1; i>= size()/2; i-=1)
-            {
-                if(index == i)
-                    break ;
+        Node<E> counter = head ;
 
-                counter = counter.last;
-            }
+        try {
+
+            for(int i=0; i<index; i+=1)
+                counter = counter.next;
+
+            return counter.value;
+
+        } catch (Exception e) {
+            throw new IndexOutOfBoundsException();
         }
-        else
-        {
-            counter = head ;
-            for(int i=0; i< size()/2; i+=1)
-            {
-                if(index == i)
-                    break ;
-
-                counter = counter.next ;
-            }
-        }
-
-        return counter.value ;
        
     }
 
