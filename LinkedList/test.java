@@ -82,6 +82,8 @@ class Solution
         doublylist.add(6);
         doublylist.add(13);
 
+        doublylist.reverse();
+
         System.out.println(doublylist.countHead());
         System.out.println("---"); 
         System.out.println(doublylist.countTail());
