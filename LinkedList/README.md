@@ -1,6 +1,6 @@
 # Linked List In Java
 
-Here I have three linked list classes called SinglyLinkedList, CirclyLinkedList and DoublyLinkedList, in which I have used classes Node and Array . In fact, unlike arrays, linked lists do not have consecutive memory but data is stored in a linear manner and work with links. also in this project we familiar with the concept of **Self Referential Structures**. 
+Here I have three linked list classes called SinglyLinkedList, CirclyLinkedList and DoublyLinkedList, in which I have used classes Node ( It is better for you to set Node classes separately for different classes ) and Array . In fact, unlike arrays, linked lists do not have consecutive memory but data is stored in a linear manner and work with links. also in this project we familiar with the concept of **Self Referential Structures**. 
 
 ```Java
     public class Node<E> {
