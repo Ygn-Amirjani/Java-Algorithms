@@ -30,13 +30,11 @@ public class RemoveDuplicatesLinkedList {
         while( next_value != null ) {
             if(last_value.val == next_value.val) {
                 last_value.next = next_value.next ;
-                next_value = last_value.next ;
             }else {
                 last_value = last_value.next ;
-                next_value = next_value.next ;
             }
+            next_value = next_value.next ;
         }
-
         return head ;
     }
     
