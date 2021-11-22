@@ -1,11 +1,11 @@
 /** Question link -> https://leetcode.com/problems/linked-list-cycle-ii/ */
 
-class List_Node {
+class ListNode {
     // Definition for singly-linked list.
     int val;
-    List_Node next;
+    ListNode next;
 
-    List_Node(int x) {
+    ListNode(int x) {
         val = x;
         next = null;
     }
@@ -13,8 +13,8 @@ class List_Node {
 }
 
 public class LinkedListCycle2 {
-    public List_Node detectCycle(List_Node head) {
-        List_Node counter = head ;
+    public ListNode detectCycle(ListNode head) {
+        ListNode counter = head ;
         while( counter != null ) {
             if(counter.val == 100001)
                 return counter ;

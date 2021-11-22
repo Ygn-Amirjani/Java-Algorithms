@@ -1,31 +1,31 @@
 /** Question link ->  https://leetcode.com/problems/remove-duplicates-from-sorted-list/ */
 
-class listNode {
+class ListNode {
     // Definition for singly-linked list.
     int val;
-    listNode next;
+    ListNode next;
 
-    listNode() {
+    ListNode() {
 
     }
 
-    listNode(int val) { 
+    ListNode(int val) { 
         this.val = val; 
     }
 
-    listNode(int val, listNode next) {
+    ListNode(int val, ListNode next) {
          this.val = val; this.next = next; 
     }
 }
 
 public class RemoveDuplicatesLinkedList {
 
-    public listNode deleteDuplicates(listNode head) {
+    public ListNode deleteDuplicates(ListNode head) {
         if(head == null)
             return null ;
         
-        listNode last_value = head ;
-        listNode next_value = head.next ;
+        ListNode last_value = head ;
+        ListNode next_value = head.next ;
 
         while( next_value != null ) {
             if(last_value.val == next_value.val) {
