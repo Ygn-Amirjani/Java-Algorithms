@@ -18,7 +18,7 @@ class ListNode {
     }
 }
 
-public class RemoveDuplicatesLinkedList {
+public class RemoveDuplicatesLinkedList1 {
 
     public ListNode deleteDuplicates(ListNode head) {
         if(head == null)
