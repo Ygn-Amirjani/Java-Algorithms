@@ -1,17 +1,5 @@
 /** Question link ->  https://leetcode.com/problems/linked-list-cycle/ */
 
-class ListNode {
-    // Definition for singly-linked list.
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-        next = null;
-    }
-
-}
-
 public class LinkedListCycle1 {
 
     public boolean hasCycle(ListNode head) {
