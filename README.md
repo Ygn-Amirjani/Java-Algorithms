@@ -1,6 +1,6 @@
 # Java Algorithms
 
-this project is only for learning and has no specific purpose :) 
+This project is made just for learning and university lessons :)    
 
 
 ## The purpose of this project :
