@@ -1,6 +1,6 @@
 # Java Algorithms
  
-One of the best books available for learning algorithms is [CLRS](https://edutechlearners.com/download/Introduction_to_algorithms-3rd%20Edition.pdf) So Read more And never forget that *** Knowledge is power. ***  So Let's try to learn more every day .
+One of the best books available for learning algorithms is [CLRS](https://edutechlearners.com/download/Introduction_to_algorithms-3rd%20Edition.pdf) So Read more And never forget that **Knowledge is power.**  So Let's try to learn more every day .
 
 ## The purpose of this project :
 
