@@ -12,11 +12,10 @@ public class SinglyLinkedList<E>
     public void add(E new_element)
     {
         if(isEmpty())
-        {
+        
             // add element and put the node equals to null
             head = new Node<E>(new_element);
-            len += 1 ;
-        }
+        
         else
         {
             // add element in the last node of the list
@@ -28,9 +27,10 @@ public class SinglyLinkedList<E>
             
             new_node.next = null ;  // The last link is zero 
             count.next = new_node ;
-            len += 1 ;
+
         }
 
+        len += 1 ;
     }
 
     /** I want to use the overload concept 
