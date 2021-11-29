@@ -15,11 +15,10 @@ public class DoublyLinkedList<E> {
     public void add(E new_element)
     {
         if(isEmpty())
-        {
+        
             //In the first, the link to the right is null, and the left is null 
             head = new Node<E>(new_element);
-            len += 1 ;
-        }
+        
         else
         {
             //When an element is added, NULL links to the next element 
@@ -32,10 +31,10 @@ public class DoublyLinkedList<E> {
            tail.last = counter ;
            tail.next = null ;   // In tail, the link to the right is null, and the link to the left refers to the previous element 
            counter.next = tail ;
-           len += 1 ;
 
         }
 
+        len += 1;
     }
 
     /** I want to use the overload concept 
