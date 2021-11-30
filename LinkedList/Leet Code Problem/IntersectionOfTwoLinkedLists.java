@@ -1,7 +1,6 @@
-import java.util.HashSet;
-import java.util.Set;
-
 /** Question link ->  https://leetcode.com/problems/intersection-of-two-linked-lists/ */
+
+import java.util.*;
 
 public class IntersectionOfTwoLinkedLists {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
