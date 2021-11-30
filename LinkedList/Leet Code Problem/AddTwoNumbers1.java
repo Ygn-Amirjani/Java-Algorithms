@@ -3,22 +3,21 @@
 public class AddTwoNumbers1 {
     
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        ListNode one =  size(l1) >= size(l2) ? l1 : l2 ;
-        ListNode two = size(l1) >= size(l2) ? l2 : l1 ;
         ListNode result = new ListNode(0) ;
-        ListNode tmp = result ;
+        ListNode tmp = result ;        
+        ListNode one =  l1 ;
+        ListNode two = l2 ;
         int divide = 0 ;
 
-        while (one != null) {
-            int x = two != null ? two.val : 0 ;
-            int sum = x + one.val + divide ;
+        while (one != null || two != null) {
+            int x = one != null ? one.val : 0 ;
+            int y = two != null ? two.val : 0 ;
+            int sum = x + y + divide ;
             tmp.next = new ListNode(sum % 10);
             divide = sum / 10 ;
 
-            if(two != null)
-                two = two.next ;
-
-            one = one.next ;
+            if(two != null) two = two.next ;
+            if(one != null) one = one.next ;
             tmp = tmp.next ;
         }
         
@@ -28,15 +27,4 @@ public class AddTwoNumbers1 {
         return result.next;
     }
 
-    public int size(ListNode head) {
-        ListNode tmp = head ;
-        int counter = 0 ;
-        while(tmp != null) {
-            tmp = tmp.next ;
-            counter += 1 ;
-        }
-
-        return counter ;
-
-    }
 }
