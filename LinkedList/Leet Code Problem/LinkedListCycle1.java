@@ -6,7 +6,7 @@ public class LinkedListCycle1 {
         ListNode counter = head ;
         while( counter != null ) {
             /** Constraints :
-             *  -105 <= Node.val <= 105
+             *  -10^5 <= Node.val <= 10^5
             */
             if(counter.val > 100000)
                 return true ;
