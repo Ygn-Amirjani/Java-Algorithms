@@ -15,14 +15,12 @@ public class MergeTwoSortedLists {
             if(x < y) {
                 tmp.next = new ListNode(l1.val);
 
-                if(l1 != null)
-                    l1 = l1.next ;
+                if(l1 != null) l1 = l1.next ;
             }
             else {
                 tmp.next = new ListNode(l2.val);
 
-                if(l2 != null) 
-                    l2 = l2.next ;
+                if(l2 != null) l2 = l2.next ;
             }
 
             tmp = tmp.next ;
