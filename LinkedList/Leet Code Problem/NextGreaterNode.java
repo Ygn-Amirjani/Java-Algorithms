@@ -2,17 +2,15 @@
 
 public class NextGreaterNode {
     public int[] nextLargerNodes(ListNode head) {
-
         int[] array = new int[size(head)];
-        ListNode last = head ;
         ListNode nextval ;
         int i = 0 ;
 
-        while (last.next != null) {
+        while (head.next != null) {
 
-            nextval = last.next ;
+            nextval = head.next ;
             while (nextval != null) {
-                if (last.val < nextval.val) {
+                if (head.val < nextval.val) {
                     array[i++] = nextval.val ;
                     nextval = null ;
                 }
@@ -23,7 +21,7 @@ public class NextGreaterNode {
                 }
             }
 
-            last = last.next ;
+            head = head.next ;
         }
         
         return array ;
