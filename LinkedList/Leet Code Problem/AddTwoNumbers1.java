@@ -1,23 +1,21 @@
-/** Question link ->  https://leetcode.com/problems/linked-list-cycle/ */
+/** Question link ->  https://leetcode.com/problems/add-two-numbers/ */
 
 public class AddTwoNumbers1 {
     
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+    public ListNode addl2Numbers(ListNode l1, ListNode l2) {
         ListNode result = new ListNode(0) ;
         ListNode tmp = result ;        
-        ListNode one =  l1 ;
-        ListNode two = l2 ;
         int divide = 0 ;
 
-        while (one != null || two != null) {
-            int x = one != null ? one.val : 0 ;
-            int y = two != null ? two.val : 0 ;
+        while (l1 != null || l2 != null) {
+            int x = l1 != null ? l1.val : 0 ;
+            int y = l2 != null ? l2.val : 0 ;
             int sum = x + y + divide ;
             tmp.next = new ListNode(sum % 10);
             divide = sum / 10 ;
 
-            if(two != null) two = two.next ;
-            if(one != null) one = one.next ;
+            if(l2 != null) l2 = l2.next ;
+            if(l1 != null) l1 = l1.next ;
             tmp = tmp.next ;
         }
         
