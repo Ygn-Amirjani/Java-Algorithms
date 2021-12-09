@@ -8,7 +8,6 @@ public class MergeTwoSortedLists {
         ListNode tmp = result ;
 
         while (l1 != null || l2 != null) {
-
             int x = l1 != null ? l1.val : 101 ;
             int y = l2 != null ? l2.val : 101 ;
 
@@ -19,7 +18,6 @@ public class MergeTwoSortedLists {
             }
             else {
                 tmp.next = new ListNode(l2.val);
-
                 if(l2 != null) l2 = l2.next ;
             }
 
