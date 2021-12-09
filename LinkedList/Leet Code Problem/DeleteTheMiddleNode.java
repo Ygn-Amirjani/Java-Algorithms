@@ -15,7 +15,6 @@ public class DeleteTheMiddleNode {
         return head ;
     }
 
-
     public int size(ListNode head) {
         ListNode tmp = head ;
         int counter = 0 ;
@@ -27,4 +26,5 @@ public class DeleteTheMiddleNode {
 
         return counter ;
     }
+
 }
