@@ -14,6 +14,7 @@ public class LinkedListComponents {
 
             if(head != null) head = head.next ;
         }
+        
         return result ;
     }
 
