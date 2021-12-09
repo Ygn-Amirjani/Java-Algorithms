@@ -15,8 +15,10 @@ public class GetDecimalValue {
       }
 
       return sum ;
+      
+    }
 
-      /* A simple solution to the problem as stated by Leetcode itself :
+    /* A simple solution to the problem as stated by Leetcode itself :
 
       int num = head.val;
       while (head.next != null) {
@@ -25,9 +27,7 @@ public class GetDecimalValue {
       }
       return num;
 
-      */
-      
-    }
+    */
 
     public int size(ListNode head) {
         ListNode tmp = head ;
@@ -41,4 +41,5 @@ public class GetDecimalValue {
         return counter ;
 
     }
+    
 }
