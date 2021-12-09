@@ -2,6 +2,8 @@
 
 public class SwappingNodes {
     public ListNode swapNodes(ListNode head, int k) {
+        if(head == null) return null ;
+        
         ListNode fast = head ;
         ListNode slow = head ;
         ListNode start = head ;
