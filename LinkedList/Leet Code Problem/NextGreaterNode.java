@@ -7,8 +7,8 @@ public class NextGreaterNode {
         int i = 0 ;
 
         while (head.next != null) {
-
             nextval = head.next ;
+
             while (nextval != null) {
                 if (head.val < nextval.val) {
                     array[i++] = nextval.val ;
@@ -16,14 +16,14 @@ public class NextGreaterNode {
                 }
                 else {
                     nextval = nextval.next ;
+
                     if (nextval == null) 
                         array[i++] = 0 ;
                 }
             }
-
             head = head.next ;
         }
-        
+
         return array ;
     }
 
