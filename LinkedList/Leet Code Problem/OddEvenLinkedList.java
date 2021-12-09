@@ -3,9 +3,7 @@
 public class OddEvenLinkedList {
     
     public ListNode oddEvenList(ListNode head) {
-
-        if(head == null)
-            return null ;
+        if(head == null) return null ;
 
         ListNode result = new ListNode(head.val);
         ListNode tmp = result ;
