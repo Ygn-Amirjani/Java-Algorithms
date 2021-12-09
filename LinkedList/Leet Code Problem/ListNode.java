@@ -1,3 +1,4 @@
+/** Linked list class for leetcode Questions */
 public class ListNode {
     
     //Definition for singly-linked list.
