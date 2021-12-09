@@ -10,13 +10,14 @@ public class RemoveDuplicatesLinkedList1 {
         ListNode next_value = head.next ;
 
         while( next_value != null ) {
-            if(last_value.val == next_value.val) {
+            if(last_value.val == next_value.val)
                 last_value.next = next_value.next ;
-            }else {
+            else 
                 last_value = last_value.next ;
-            }
+            
             next_value = next_value.next ;
         }
+        
         return head ;
     }
     
