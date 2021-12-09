@@ -8,11 +8,8 @@ public class MergeInBetweenLinkedLists {
         long counter = 0 ;
 
         while (list1 != null) {
-
             if(counter == a) {
-
                 while (list2 != null) {
-
                     tmp.next = new ListNode(list2.val);
                     list2 = list2.next ;
 
@@ -25,7 +22,6 @@ public class MergeInBetweenLinkedLists {
                 }
             }
             else {
-
                 tmp.next = new ListNode(list1.val);
                 tmp = tmp.next ;
             }
