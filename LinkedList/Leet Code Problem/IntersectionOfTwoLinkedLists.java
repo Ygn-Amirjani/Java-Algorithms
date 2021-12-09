@@ -9,19 +9,20 @@ public class IntersectionOfTwoLinkedLists {
         ListNode currA = headA;
         ListNode currB = headB;
         
-        
         while(currA != null){
             set.add(currA);
             currA = currA.next;
         }
 
         while(currB != null){
-            if(set.contains(currB)){
+            if(set.contains(currB))
                 return currB;
-            }else{
+            else
                 currB = currB.next;
-            }
+            
         }
+
         return null;
     }
+    
 }
