@@ -4,6 +4,7 @@ public class LinkedListCycle1 {
 
     public boolean hasCycle(ListNode head) {
         ListNode counter = head ;
+        
         while( counter != null ) {
             /** Constraints :
              *  -10^5 <= Node.val <= 10^5
