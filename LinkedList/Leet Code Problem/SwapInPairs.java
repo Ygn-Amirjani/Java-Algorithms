@@ -7,6 +7,7 @@ public class SwapInPairs {
         ListNode fast = head.next ;
         ListNode slow = head ;
         int tmp ;
+        
         while (fast != null) {
             tmp = fast.val ;
             fast.val = slow.val ;
