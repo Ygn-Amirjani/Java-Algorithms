@@ -8,9 +8,9 @@ public class FindTheMinimumAndMaximumNumber {
         int minimum = -1 ;
 
         while (result.next != null) {
-            if (result.val > lasNode.val && result.val > result.next.val) {
+            if (result.val > lasNode.val && result.val > result.next.val) 
                 maximum = result.val ;
-            }
+
             else {
                 if (result.val < lasNode.val && result.val < result.next.val) {
                     minimum = result.val ;
