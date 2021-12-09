@@ -3,6 +3,7 @@
 public class LinkedListCycle2 {
     public ListNode detectCycle(ListNode head) {
         ListNode counter = head ;
+        
         while( counter != null ) {
             if(counter.val == 100001)
                 return counter ;
