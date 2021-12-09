@@ -2,8 +2,7 @@
 
 public class RemoveDuplicatesLinkedList2 {
     public ListNode deleteDuplicates(ListNode head) {
-        if(head == null)
-            return null ;
+        if(head == null) return null ;
 
         ListNode next_value = head.next ;
         ListNode last_value = head ;
