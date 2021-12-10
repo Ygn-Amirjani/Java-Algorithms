@@ -14,11 +14,13 @@ public class DoublyLinkedList<E> {
     /** add element into linked list */
     public void add(E new_element)
     {
-        if(isEmpty())
-        
+        if(isEmpty()){
+
             //In the first, the link to the right is null, and the left is null 
             head = new Node<E>(new_element);
-        
+            head.last = null ;
+            head.next = null ;
+        }
         else
         {
             //When an element is added, NULL links to the next element 
