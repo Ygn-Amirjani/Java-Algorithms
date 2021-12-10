@@ -11,11 +11,13 @@ public class CircleLinkedList<E>
     /** add element into linked list */
     public void add(E new_element)
     {
-        if(isEmpty())
+        if(isEmpty()){
         
             //add element and put the node equals to null
             head = new Node<E>(new_element);
-        
+            head.next = head ;
+            
+        }
         else
         {
             //add element in the last node of the list
