@@ -86,8 +86,6 @@ class Solution
 
         System.out.println(doublylist.countHead());
         System.out.println("---"); 
-        System.out.println(doublylist.countTail());
-        System.out.println("---"); 
 
         doublylist.remove(10);
         doublylist.remove(4);
