@@ -59,6 +59,13 @@ public class StackOfLinkedList<E> {
         }
     }
 
+    /** This method removes all elements of the stack  */
+    public void clear()
+    {
+        head = null ;
+        len = 0 ;
+    }
+
     /** Return the last element added . */
     public E peek()
     {
